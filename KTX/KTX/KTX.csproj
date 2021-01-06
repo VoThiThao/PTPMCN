@@ -157,6 +157,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Common\Constants.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\HoaDonController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PhongController.cs" />
     <Compile Include="Controllers\QLDController.cs" />
@@ -168,6 +169,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="HoaDonViewModel\HoaDonViewModel.cs" />
+    <Compile Include="HoaDonViewModel\XuatHoaDon.cs" />
+    <Compile Include="Models\HoaDonModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\PhongModel.cs" />
     <Compile Include="Models\QLDModel.cs" />
@@ -1218,6 +1222,9 @@
     <Content Include="Views\QLN\Index.cshtml" />
     <Content Include="Views\QLN\Create.cshtml" />
     <Content Include="Views\QLN\Edit.cshtml" />
+    <Content Include="Views\HoaDon\Index.cshtml" />
+    <Content Include="Views\HoaDon\Create.cshtml" />
+    <Content Include="Views\HoaDon\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
