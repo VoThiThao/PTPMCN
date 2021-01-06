@@ -100,11 +100,5 @@ namespace KTX.Controllers
             }
             return View();
         }
-        public ActionResult Delete(string maHD)
-        {
-            new HoaDonModel().Delete(maHD);
-            SetAlert("Xóa thành công!", "success");
-            return RedirectToAction("Index", "HoaDon");
-        }
     }
 }

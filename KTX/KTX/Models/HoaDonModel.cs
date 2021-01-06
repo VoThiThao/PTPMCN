@@ -113,19 +113,5 @@ namespace KTX.Models
 
         }
 
-        public void Delete(string maHD)
-        {
-            try
-            {
-                var hd = db.HOADONs.FirstOrDefault(x => x.MaHD.Contains(maHD));
-                db.HOADONs.Remove(hd);
-                db.SaveChanges();
-
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-        }
     }
 }
