@@ -17,12 +17,12 @@ namespace KTX.Controllers
         public ActionResult Index(string searchString)
         {
             var sv = new QLSVModel();
-            if (searchString == "")
+            if (searchString == string.Empty)
             {
                 SetAlert("Vui lòng nhập nội dung tìm kiếm", "error");
             }
             var model = sv.ListWhereAll(searchString);
-            @ViewBag.SearchString = searchString;
+            //@ViewBag.SearchString = searchString;
             return View(model);
 
         }
@@ -86,9 +86,9 @@ namespace KTX.Controllers
             }
             return View();
         }
-        public ActionResult Delete(string MaSV)
+        public ActionResult Delete(string maSV)
         {
-            new QLSVModel().Delete(MaSV);
+            new QLSVModel().Delete(maSV);
             SetAlert("Xóa thành công!", "success");
             return RedirectToAction("Index", "QLSV");
         }

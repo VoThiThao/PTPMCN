@@ -15,7 +15,7 @@ namespace KTX.Controllers
         public ActionResult Index(string searchString)
         {
             var nuoc = new QLNModel();
-            if (searchString == "")
+            if (searchString == string.Empty)
             {
                 SetAlert("Vui lòng nhập nội dung tìm kiếm", "error");
             }

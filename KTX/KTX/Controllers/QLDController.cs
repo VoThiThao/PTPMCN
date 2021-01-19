@@ -16,7 +16,7 @@ namespace KTX.Controllers
         {
 
             var dien = new QLDModel();
-            if (searchString == "")
+            if (searchString == string.Empty)
             {
                 SetAlert("Vui lòng nhập nội dung tìm kiếm", "error");
             }

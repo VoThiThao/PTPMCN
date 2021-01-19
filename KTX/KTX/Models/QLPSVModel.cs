@@ -38,8 +38,14 @@ namespace KTX.Models
         public String Insert(PHONGSV entitySinhVien)
         {
             db.PHONGSVs.Add(entitySinhVien);
-            try { db.SaveChanges(); }
-            catch (Exception e) { Console.WriteLine("Mã sinh viên hoặc mã phòng không có trong CSDL!", e.Message); }
+            try 
+            { 
+                db.SaveChanges(); 
+            }
+            catch (Exception e) 
+            { 
+                Console.WriteLine("Mã sinh viên hoặc mã phòng không có trong CSDL!", e.Message); 
+            }
             return entitySinhVien.MaPhongSV;
         }
 
@@ -62,14 +68,14 @@ namespace KTX.Models
             return true;
         }
 
-        public PHONGSV getByMaSV(string MaSV)
+        public PHONGSV getByMaSV(string maSV)
         {
-            return db.PHONGSVs.SingleOrDefault(x => x.MaSV == MaSV);
+            return db.PHONGSVs.SingleOrDefault(x => x.MaSV == maSV);
         }
 
-        public PHONGSV Find(string MaSV)
+        public PHONGSV Find(string maSV)
         {
-            return db.PHONGSVs.Find(MaSV);
+            return db.PHONGSVs.Find(maSV);
 
         }
 

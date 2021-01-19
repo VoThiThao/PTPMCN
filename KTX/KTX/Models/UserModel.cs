@@ -76,6 +76,7 @@ namespace KTX.Models
             }
             catch (Exception e)
             {
+                Console.WriteLine(e.Message);
                 return false;
             }
         }
@@ -104,7 +105,7 @@ namespace KTX.Models
 
             catch (Exception e)
             {
-
+                Console.WriteLine(e.Message);
             }
         }
     }

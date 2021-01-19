@@ -60,14 +60,14 @@ namespace KTX.Models
             return true;
         }
 
-        public SINHVIEN getByMaSV(string MaSV)
+        public SINHVIEN getByMaSV(string maSV)
         {
-            return db.SINHVIENs.SingleOrDefault(x => x.MaSV == MaSV);
+            return db.SINHVIENs.SingleOrDefault(x => x.MaSV == maSV);
         }
 
-        public SINHVIEN Find(string MaSV)
+        public SINHVIEN Find(string maSV)
         {
-            return db.SINHVIENs.Find(MaSV);
+            return db.SINHVIENs.Find(maSV);
 
         }
 
@@ -100,6 +100,7 @@ namespace KTX.Models
 
             catch (Exception e)
             {
+                Console.WriteLine("Xóa không thành công vui lòng kiểm tra lại!", e.Message);
             }
         }
     }

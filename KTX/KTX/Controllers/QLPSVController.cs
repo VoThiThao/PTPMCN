@@ -17,12 +17,12 @@ namespace KTX.Controllers
         public ActionResult Index(string searchString)
         {
             var sv = new QLPSVModel();
-            if (searchString == "")
+            if (searchString == string.Empty)
             {
                 SetAlert("Vui lòng nhập nội dung tìm kiếm", "error");
             }
             var model = sv.ListWhereAll(searchString);
-            @ViewBag.SearchString = searchString;
+            //@ViewBag.SearchString = searchString;
             return View(model);
 
         }

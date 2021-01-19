@@ -18,7 +18,7 @@ namespace KTX.Controllers
         public ActionResult Index(string searchString)
         {
             var sv = new PhongModel();
-            if (searchString == "")
+            if (searchString == string.Empty)
             {
                 SetAlert("Vui lòng nhập thông tin tìm kiếm", "error");
             }
@@ -87,7 +87,7 @@ namespace KTX.Controllers
                     }
                 }catch (Exception e)
                 {
-                    
+                    Console.WriteLine(e.Message);
                 }
             }
             return View();
@@ -95,6 +95,7 @@ namespace KTX.Controllers
         public ActionResult Delete(string MaPhong)
         {
             new PhongModel().Delete(MaPhong);
+            SetAlert("Xóa thành công!", "success");
             return RedirectToAction("Index", "Phong");
         }
 

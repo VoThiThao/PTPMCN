@@ -13,13 +13,13 @@ namespace Models.EF
         [StringLength(15)]
         public string MaHD { get; set; }
 
-        [Required]
+        
         [StringLength(15)]
         public string MaPhong { get; set; }
 
         public DateTime NgayGhi { get; set; }
 
-        [Required]
+        
         [StringLength(15)]
         public string MaNV { get; set; }
 

@@ -17,7 +17,7 @@ namespace KTX.Controllers
 
         public ActionResult Index(string searchString)
         {
-            if (searchString == "")
+            if (searchString == string.Empty)
             {
                 SetAlert("Vui lòng nhập nội dung tìm kiếm", "warning");
             }
